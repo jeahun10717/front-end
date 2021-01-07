@@ -1,0 +1,78 @@
+@viewport {width: device-width;}
+* { position:relative; box-sizing: border-box; font-family: initial;}
+
+/* 모바일 css */
+@media screen and (max-width : 480px){
+    #contentWrapper{
+        width: 480px;
+        height: 800px;
+        background-color: aqua;
+    }
+    #content1{
+        width: 80%;
+        padding: 5%;
+        margin: 5%;
+        height: 90%;
+        background-color: red;
+        display:block;
+    }
+    #content2{
+        width: auto;
+        padding: 5%;
+        height: 100%;
+        background-color: blue;
+        display:none;
+    }
+    #content3{
+        width: auto;
+        padding: 5%;
+        height: 100%;
+        background-color: green;
+        display:none;
+    }
+    button{
+        width: 100px;
+        height: 50px;
+    }
+}
+
+/* 데스크톱 css */
+@media screen and (min-width : 480px){
+    body{
+        display: block;
+        margin: 8px;
+    }
+
+    #contentWrapper{
+        width: 1100px;
+        height: 700px;
+        background-color: aqua;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    #content1{
+        width: 40%;
+        height: 100%;
+        background-color: red;
+        display: inline-block;
+        margin: 0 5% 0 5% ;
+    }
+    #content2{
+        width: 40%;
+        height: 100%;
+        background-color: blue;
+        display: inline-block;
+        margin: 0 5% 0 5% ;
+    }
+    #content3{
+        width: 40%;
+        height: 100%;
+        background-color: green;
+        display: none;
+        margin: 0 5% 0 5% ;
+    }
+    button{
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title {{ title }}
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+  body
+    .container(style="padding-top:100px;")
+    table.table.table-bordered
+    tbody
+        tr
+        th 아이디
+        td
+            input(type="id", id="id", value='')
+        tr
+        th 비밀번호
+        td
+            input(type="password", id="pw", value='')
+    input(type="button")
+    script.
+      axios.get('/login')
+      .then((res)=>{
+        console.log(res.data);
+      }).catch((Error)=>{
+        console.log(Error)
+      })
